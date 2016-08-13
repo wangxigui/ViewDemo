@@ -36,7 +36,8 @@
     //add button
     CGRect ButtonFrame=CGRectMake(150, 150, 90, 20);
     UIButton *v_button=[[UIButton alloc]initWithFrame:ButtonFrame];
-    v_button.backgroundColor=[UIColor redColor];
+    v_button.backgroundColor=[UIColor redColor]; 
+    v_button.accessibilityLabel=@"mybottonlable";
 //    [v_button setTitle:@"button1" forState:0];
     [self.view addSubview:v_button];
 }
