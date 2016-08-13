@@ -31,6 +31,7 @@
     CGRect CGone = CGRectMake(0.0, 0.0, 320, 100);//画个矩形，初始化位置与大小
     UIView *v_one = [[UIView alloc]initWithFrame:CGone];//初始化view
     v_one.backgroundColor = [UIColor blueColor];// 涂成蓝色
+    v_one.accessibilityLabel=@"viewlable";
     [self.view addSubview:v_one];
     
     //add button
