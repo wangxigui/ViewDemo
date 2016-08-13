@@ -35,6 +35,20 @@
 - (void)testExample {
     // Use recording to get started writing UI tests.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    XCUIApplication *app = [[XCUIApplication alloc] init];
+    [app.buttons[@"OK"] tap];
+  
+    [app.staticTexts[@"hello test"] tap];
+    
+    
+    XCUIElementQuery *helloTestElementsQuery = [[[XCUIApplication alloc] init].otherElements containingType:XCUIElementTypeStaticText identifier:@"hello test"];
+    [[[helloTestElementsQuery childrenMatchingType:XCUIElementTypeOther] elementBoundByIndex:1] tap];
+    [[[helloTestElementsQuery childrenMatchingType:XCUIElementTypeButton] elementBoundByIndex:0] tap];
+    
+    
+    
+    
 }
 
 @end
